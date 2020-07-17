@@ -12,7 +12,7 @@ const server = app.listen(port, () => {
 });
 
 const io = socket(server)
-io.on('connection', () => {
+io.on('connection', (socket) => {
 
     console.log(`Socket Connected`)
 
@@ -26,4 +26,12 @@ io.on('connection', () => {
         activeUsers.delete(socket.userId);
         io.emit("user disconnected", socket.userId);
     })
+
+    socket.on("chat message", function (data) {
+        io.emit("chat message", data);
+    });
+
+    socket.on("typing", function (data) {
+        socket.broadcast.emit("typing", data);
+    });
 })
