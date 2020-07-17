@@ -1,0 +1,58 @@
+.inbox__people {
+    height: max-content;
+    width: fit-content;
+    float: left;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inbox__messages {
+    height: inherit;
+    width: max-content;
+    float: right;
+}
+
+.inbox__messages .messages__history {
+    height: max-content;
+    width: max-content;
+    float: right;
+    font-size: medium;
+}
+
+.inbox__messages .fallback {
+    height: 45px;
+    width: fit-content;
+    float: right;
+    font-size: small;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+.message_form {
+    padding-bottom: 50px;
+    position:absolute;
+    bottom: 0;
+}
+
+.message_form .message_form__input {
+    height: 40px;
+    width: 500px;
+    border-radius: 8px;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+}
+.message_form .message_form__button {
+    height: 45px;
+    width: 80px;
+    border-radius: 8px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #303f9f;
+}
+
+.message_form__button:hover {
+    background-color: #303f9f;
+    color: white;
+  }
